@@ -1,0 +1,345 @@
+/* static/css/style.css */
+/* Reset styles */
+body,
+h1,
+form {
+    margin: 0;
+    padding: 0;
+}
+
+/* Color variables */
+
+:root {
+    --primary-color: #11ddb1;
+    --secondary-color: #05ab92;
+    --primary-text-color: #000;
+    --secondary-text-color: #fff;
+}
+
+body {
+    background-image: url("../images/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* Centering the content */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    gap: 4rem;
+    width: 75%;
+}
+
+.container-col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    position: relative;
+    gap: 1rem;
+    flex-direction: column;
+    flex: 100%;
+}
+
+.content {
+    text-align: center;
+    z-index: 1;
+    backdrop-filter: blur(15px) brightness(1.25);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    padding: 3.5%;
+    border-radius: 5%;
+    height: 90%;
+    box-sizing: border-box;
+    flex: 100%;
+    width: 100%;
+    transition: all 0.3s ease;
+    transform: perspective(1px) translateZ(0);
+    backface-visibility: hidden;
+    /* Ensure content is above the background */
+}
+
+.content:hover {
+    transform: scale(1.05);
+
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: var(--secondary-text-color);
+    /* White text color */
+}
+
+/* Background image */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    /* Set a light background color */
+}
+
+
+/* Set pitch black color for all text and input fields */
+h1,
+label,
+input[type="number"],
+select,
+input[type="submit"],
+.popup-content,
+input[type="text"] {
+    color: var(--primary-text-color);
+    /* Pitch black color */
+}
+
+.flex {
+    display: flex;
+}
+
+/* Form */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Labels */
+label {
+    color: var(--primary-text-color);
+    /* Pitch black color */
+    margin-bottom: 10px;
+}
+
+/* Inputs */
+input[type="number"],
+select {
+    width: 150px;
+    padding: 5px;
+    border: none;
+    border-bottom: 2px solid var(--primary-color);
+    background-color: transparent;
+    margin-bottom: 10px;
+}
+
+/* Submit Button */
+input[type="submit"] {
+    width: 100%;
+    height: 4rem;
+    margin-top: 2rem;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: large;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-kerning: auto;
+    transition: all 0.3s ease;
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+input[type="submit"]:hover {
+    background-color: var(--secondary-color);
+}
+
+#calculateBMI {
+    width: 100%;
+    height: 4rem;
+    margin-top: 2rem;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: large;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-kerning: auto;
+  
+}
+
+#calculateBMI:hover {
+    background-color: var(--secondary-color);
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex ul {
+    text-align: right;
+    list-style: none;
+    width: 100%;
+}
+
+.left li {
+    text-align: left;
+}
+
+.flex ul li {
+    border-radius: 5px;
+    padding: 5px;
+
+}
+
+.flex ul li:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    font-weight: 500;
+}
+
+/* Popup */
+#popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(194, 203, 207, 0.977);
+    /* Semi-transparent black */
+    padding: 20px;
+    border-radius: 10px;
+    color: var(--secondary-text-color);
+    /* White text color */
+    z-index: 2;
+    /* Ensure popup is above the background */
+    display: none;
+}
+
+.popup-content {
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+.poppins-thin {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.poppins-extralight {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.poppins-light {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.poppins-medium {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.poppins-semibold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.poppins-bold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.poppins-extrabold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.poppins-black {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.poppins-thin-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+}
+
+.poppins-extralight-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: italic;
+}
+
+.poppins-light-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.poppins-regular-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.poppins-medium-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.poppins-semibold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.poppins-bold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.poppins-extrabold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.poppins-black-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+}

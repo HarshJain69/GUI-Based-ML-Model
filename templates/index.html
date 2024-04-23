@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Cost Prediction</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container poppins-regular">
+        <div class="content">
+            <h1>Insurance Cost Prediction</h1>
+            <form id="predictionForm">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required><br>
+
+                <label for="bmi">BMI:</label> <!-- Replaced weight and height with BMI -->
+                <input type="number" id="bmi" name="bmi" step="0.01" required><br> <!-- Replaced weight and height with BMI -->
+
+                <label for="children">Number of Children:</label>
+                <input type="number" id="children" name="children" required><br>
+
+                <label for="smoker">Smoker:</label>
+                <select id="smoker" name="smoker" required>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select><br>
+
+                <label for="sex">Sex:</label>
+                <select id="sex" name="sex" required>
+                    <option value="0">Male</option>
+                    <option value="1">Female</option>
+                </select><br>
+
+                <label for="region">Region:</label>
+                <select id="region" name="region" required>
+                    <option value="1">Southwest</option>
+                    <option value="2">Southeast</option>
+                    <option value="3">Northwest</option>
+                    <option value="4">Northeast</option>
+                </select><br>
+
+                <input type="submit" value="Predict">
+            </form>
+            <div id="predictionResult"></div> <!-- Prediction result will be displayed here -->
+        </div>
+        <div class="container-col">
+            <div class="content">
+                <h1>BMI Calculator</h1>
+                <div id="bmiCalculator">
+                    <label for="weight">Weight (in kilograms):</label><br>
+                    <input type="number" id="weight" name="weight" step="0.01" required><br>
+                    <label for="height">Height (in meters):</label><br>
+                    <input type="number" id="height" name="height" step="0.01" required><br>
+                    <button id="calculateBMI">Calculate BMI</button>
+                    <div id="bmiResult"></div>
+                </div>
+            </div>
+            <div class="content">
+                <h1>Team Members</h1>
+                <div class="flex">
+                    <ul>
+                        <li>Harsh Partap Jain</li>
+                        <li>Madhav </li>
+                    </ul>
+                    <ul class="left">
+                        <li>23BAI70194</li>
+                        <li>23BAI70107</li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="popup" class="hidden">
+        <div class="popup-content">
+            <span id="close" class="close">&times;</span>
+            <div id="predictionResult"></div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>
