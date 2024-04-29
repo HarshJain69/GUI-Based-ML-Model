@@ -17,7 +17,7 @@ This project implements a machine learning model to predict medical insurance co
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/health-insurance-prediction.git
+   git clone https://github.com/HarshJain69/health-insurance-prediction.git
    ```
 2. Navigate to the project directory:
    ```bash
